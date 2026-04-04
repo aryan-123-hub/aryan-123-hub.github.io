@@ -545,4 +545,13 @@ window.addEventListener('scroll',()=>{
 
 /* PROJECT SPOTLIGHT */
 document.querySelectorAll('.pj-card').forEach(c=>{
-  c.addEventListener('mousemove',e=>{const r=c.getBoundingClientRect();c.style.setProperty('--mx',((e.clientX-r.left)/r.width*100)+'%');c.style.setProperty(
+/* PROJECT SPOTLIGHT */
+document.querySelectorAll('.pj-card').forEach(c => {
+  c.addEventListener('mousemove', e => {
+    const r = c.getBoundingClientRect();
+    const x = ((e.clientX - r.left) / r.width) * 100;
+    const y = ((e.clientY - r.top) / r.height) * 100;
+    c.style.setProperty('--mx', x + '%');
+    c.style.setProperty('--my', y + '%');
+  });
+});
