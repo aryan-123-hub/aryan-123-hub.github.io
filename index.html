@@ -29,7 +29,14 @@ html{scroll-behavior:smooth}
   --fs:'Georgia',serif;
   --r:16px;
 }
-body{background:var(--bg);color:var(--text);font-family:var(--fb);overflow-x:hidden;cursor:none}
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:var(--fb);
+  overflow-x:hidden;
+  overflow-y:auto;   /* ADD THIS */
+  cursor:none;
+}
 ::-webkit-scrollbar{width:3px}
 ::-webkit-scrollbar-track{background:var(--bg)}
 ::-webkit-scrollbar-thumb{background:var(--ab);border-radius:3px}
@@ -486,7 +493,11 @@ footer strong{color:var(--text2)}
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 /* LOADER */
-window.addEventListener('load',()=>{setTimeout(()=>document.getElementById('loader').classList.add('gone'),2000)});
+window.addEventListener('load', () => {
+  const loader = document.getElementById('loader');
+  loader.classList.add('gone');
+  document.body.style.overflow = 'auto';
+});
 
 /* CURSOR */
 const cur=document.getElementById('cur'),ring=document.getElementById('cur-r');
@@ -544,8 +555,6 @@ window.addEventListener('scroll',()=>{
 });
 
 /* PROJECT SPOTLIGHT */
-document.querySelectorAll('.pj-card').forEach(c=>{
-/* PROJECT SPOTLIGHT */
 document.querySelectorAll('.pj-card').forEach(c => {
   c.addEventListener('mousemove', e => {
     const r = c.getBoundingClientRect();
@@ -554,4 +563,5 @@ document.querySelectorAll('.pj-card').forEach(c => {
     c.style.setProperty('--mx', x + '%');
     c.style.setProperty('--my', y + '%');
   });
+});
 });
