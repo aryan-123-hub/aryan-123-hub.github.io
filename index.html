@@ -180,29 +180,25 @@
   backdrop-filter: blur(8px);
   z-index: 3;
 }
- .photo-info {
+.photo-info {
   margin-top: 14px;
   text-align: center;
 }
 
 /* NAME */
 .pi-name {
-  font-size: 26px;
+  font-size: 30px;
   font-weight: 700;
   color: #ffffff;
 }
 
-/* ROW FOR ROLE + EXP */
-.pi-row {
+/* ROLE LINE */
+.pi-role-row {
   margin-top: 6px;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 8px;
-}
-
-/* ROLE */
-.pi-role {
   font-size: 14px;
   color: #9ca3af;
 }
@@ -214,6 +210,7 @@
 
 /* EXPERIENCE */
 .pi-exp {
+  margin-top: 6px;
   font-size: 14px;
   color: #22c55e;
   font-weight: 600;
@@ -480,17 +477,20 @@
     class="photo-img"
   />
  <!-- ✅ SIDE BY SIDE DETAILS -->
-  <div class="photo-info">
+ <div class="photo-info">
 
-  <!-- NAME (NEXT LINE) -->
+  <!-- NAME -->
   <div class="pi-name">Aryan M M</div>
 
-  <!-- ROLE + EXPERIENCE SIDE BY SIDE -->
-  <div class="pi-row">
-    <span class="pi-role">TypeScript Developer | Java Full Stack </span>
+  <!-- ROLE ROW -->
+  <div class="pi-role-row">
+    <span>TypeScript Developer</span>
     <span class="pi-sep">|</span>
-    <span class="pi-exp">1+ Years of Experience</span>
-  </div> 
+    <span>Java Full Stack</span>
+  </div>
+
+  <!-- EXPERIENCE (NEXT LINE) -->
+  <div class="pi-exp">1+ Years of Experience</div>
 
 </div>
   </div>
