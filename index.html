@@ -180,6 +180,35 @@
   backdrop-filter: blur(8px);
   z-index: 3;
 }
+    .photo-info-row {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.pi-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.pi-role {
+  font-size: 14px;
+  color: #9ca3af;
+}
+
+.pi-exp {
+  font-size: 14px;
+  color: #22c55e;
+  font-weight: 500;
+}
+
+.pi-sep {
+  color: #6b7280;
+}
 
 /* BOTTOM CENTER (PROPER SPACING) */
 .tag-exp {
@@ -419,12 +448,6 @@
       <div class="hero-badge">Available for Opportunities</div>
       <h1 class="hero-name">Aryan<br/><span>M M</span></h1>
       <p class="hero-role">&gt; TypeScript Developer | Java Full Stack</p>
-      <!-- ✅ ADD THIS BLOCK -->
-<div class="profile-badge">
-  <div class="pb-name">Aryan M M</div>
-  <div class="pb-role">TypeScript Developer | Java Full Stack</div>
-  <div class="pb-exp">1+ Years Experience</div>
-</div>
       <p class="hero-desc">
         Building scalable enterprise applications at Tata Consultancy Services. 
         Passionate about crafting clean, modular systems with Angular, Spring Boot, and RESTful APIs.
@@ -447,7 +470,14 @@
     alt="Aryan M M"
     class="photo-img"
   />
-
+ <!-- ✅ SIDE BY SIDE DETAILS -->
+  <div class="photo-info-row">
+    <span class="pi-name">Aryan M M</span>
+    <span class="pi-sep">|</span>
+    <span class="pi-role">TypeScript Developer</span>
+    <span class="pi-sep">|</span>
+    <span class="pi-exp">1+ Years</span>
+  </div>
   
   <div class="photo-float-tag tag-exp">📍 Chennai, India</div>
 </div>
